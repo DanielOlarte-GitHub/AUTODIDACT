@@ -34,3 +34,11 @@ Una vez que hemos terminado de preprocesar la señal, para cada componente, actu
 Donde
 <img width="244" alt="image" src="https://user-images.githubusercontent.com/80644486/204178542-880bb5a5-9e1b-403d-bfe1-53b16eafd39f.png">
 <br>
+
+<h1> ICA en PYTHON:</h1>
+<h3>CODIGO COMPLETO EN CUADERNO ICA.ipynb
+<img width="288" alt="image" src="https://user-images.githubusercontent.com/80644486/204178672-d43f4020-531b-4069-80ea-65cb040531db.png">
+<img width="462" alt="image" src="https://user-images.githubusercontent.com/80644486/204178702-daae211c-0c4e-4adc-abc4-d8880f44b8c2.png">
+
+<img width="473" alt="image" src="https://user-images.githubusercontent.com/80644486/204178648-dcf6e9ca-1079-41a6-aff9-0a449405c1d7.png">
+
