@@ -3,7 +3,7 @@ Supongamos que estás en una fiesta en casa y estás hablando con una chica guap
 
 Sin embargo, si esto tuviera lugar como parte de la escena de una película, el micrófono que utilizaríamos para grabar la conversación carecería de la capacidad necesaria para diferenciar entre todos los sonidos que se producen en la habitación. Aquí es donde entra en juego el Análisis de Componentes Independientes, o ICA por sus siglas en inglés. El ICA es un método computacional para separar una señal multivariable en sus componentes subyacentes. Con el ICA, podemos extraer el componente deseado (es decir, la conversación entre usted y la chica) de la amalgama de múltiples señales.
 
-
+<br><br>
 <h2> En un nivel alto, el ICA puede desglosarse en los siguientes pasos.</h2>
 
 1. Centrar x restando la media
@@ -13,6 +13,24 @@ Sin embargo, si esto tuviera lugar como parte de la escena de una película, el 
 5. Normalizar w
 6. Comprobar si el algoritmo ha convergido y si no lo ha hecho, volver al paso 4
 7. Tomar el producto punto de w y x para obtener las señales independientes de la fuente
+8. 
+<img width="410" alt="image" src="https://user-images.githubusercontent.com/80644486/204178087-9b101e4f-bd11-4c73-9efc-ed854c723da8.png">
+<br><br>
+<h2> Blanqueamiento </h2>
+Antes de aplicar el algoritmo ICA, debemos "blanquear" nuestra señal. Blanquear" una señal determinada significa que la transformamos de forma que se eliminen las posibles correlaciones entre sus componentes (covarianza igual a 0) y la varianza de cada componente sea igual a 1. Otra forma de verlo es que la matriz de covarianza de la señal blanqueada será igual a la matriz identidad.
 
-<img width="142" alt="image" src="https://user-images.githubusercontent.com/80644486/204178036-bf3f7e7b-88c3-4d2f-812e-0dbc98f1cd5d.png">
+<img width="671" alt="image" src="https://user-images.githubusercontent.com/80644486/204178214-00ce78ab-2bdb-4621-ac6b-4d1de8cc16d6.png">
+<br>
+La forma en que se realiza el blanqueo de una señal implica la descomposición de los valores propios de su matriz de covarianza. La ecuación matemática correspondiente puede describirse como sigue.
+<img width="351" alt="image" src="https://user-images.githubusercontent.com/80644486/204178282-0f441dfa-d72b-412e-a944-5e5ba35ca34a.png">
+Donde D es una matriz diagonal de valores propios (cada lambda es un valor propio de la matriz de covarianza)
+<img width="445" alt="image" src="https://user-images.githubusercontent.com/80644486/204178356-51be5616-8d7f-4f63-a194-54d068a291ab.png">
 
+y E es una matriz ortogonal de vectores propios
+Una vez que hemos terminado de preprocesar la señal, para cada componente, actualizamos los valores de la matriz de desmezcla w hasta que el algoritmo haya convergido o se haya alcanzado el número máximo de iteraciones. Se considera que la convergencia se alcanza cuando el producto punto de w y su transposición es aproximadamente igual a 1.
+
+
+<img width="556" alt="image" src="https://user-images.githubusercontent.com/80644486/204178501-fe9eb017-6078-4640-847e-26951f7333df.png">
+Donde
+<img width="244" alt="image" src="https://user-images.githubusercontent.com/80644486/204178542-880bb5a5-9e1b-403d-bfe1-53b16eafd39f.png">
+<br>
