@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Reto22</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+   <script type="text/javascript" src="js/misFunciones.js"></script>
+
+</head>
+
+<body>
+   <h1>Información GYM</h1>
+   <div id="resultado"></div>
+   <button onclick="traerInformacionMachine()">Consultar</button>
+
+
+
+   <div>
+
+
+
+      <input type="number" id="id" placeholder="id">
+      <input type="text" id="brand" placeholder="brand">
+      <input type="number" id="model" placeholder="model">
+      <input type="number" id="category_id" placeholder="category_id">
+      <input type="text" id="name" placeholder="name">
+
+   </div>
+   <button onclick="guardarInformacionMachine()"> Guardar </button>
+   <button onclick="editarInformacionMachine()">Actualizar</button>
+
+
+   <h1>Información Client</h1>
+
+   <div id="resultadoCliente"></div>
+
+
+
+   <button onclick="traerInformacionClient()">Consultar</button>
+
+
+   <div>
+      <input type="number" id="idc" placeholder="idc">
+      <input type="text" id="namec" placeholder="namec">
+      <input type="text" id="email" placeholder="email">
+      <input type="number" id="age" placeholder="age">
+
+   </div>
+   <button onclick="guardarInformacionClient()">Guardar</button>
+   <button onclick="editarInformacionClient()">Actualizar</button>
+
+
+   <h1>Información Message</h1>
+
+   <div id="resultadoMessage"></div>
+   <button onclick="traerInformacionMessage()">Consultar</button>
+
+
+
+   <div>
+
+      <input type="number" id="idm" placeholder="idm">
+      <input type="text" id="messagetext" placeholder="messagetext">
+   </div>
+
+   <button onclick="guardarInformacionMessage()">Guardar</button>
+   <button onclick="editarInformacionMessage()">Actualizar</button>
+
+</body>
+
+
+</html>
